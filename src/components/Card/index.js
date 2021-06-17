@@ -1,15 +1,15 @@
 import React from 'react'
 import './style.css'
 
-const Card = () => {
+const Card = (props) => {
     return(
         <div className="Card">
             <div className="Imagem">
-                <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-5.png" alt="Avatar" />
+                <img src={props.infoUsuario.avatar_url} alt="Avatar" />
             </div>
             <div className="Info">
-                <strong>Facebook</strong>
-                <strong>120</strong><p>Repositórios</p>
+                <strong>{props.infoUsuario.name}</strong>
+                <strong>{props.infoUsuario.public_repos}</strong><p>Repositórios</p>
             </div>
         </div>
     )
