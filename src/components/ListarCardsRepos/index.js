@@ -5,7 +5,11 @@ const Cards = (props) => {
     return (
         <>
             {props.data.map((d, i) => {
-                return <CardRepos key={i}  data={d}/>
+                return(
+                    <a key={i} href={d.html_url} target="_blank" rel="noreferrer">
+                        <CardRepos data={d}/> 
+                    </a>  
+                ) 
             })}
         </>
     )    
